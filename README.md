@@ -8,11 +8,11 @@ Time spent: **7** hours spent in total
 
 The following **required** functionality is completed:
 
-- [5] User sees app icon in home screen and styled launch screen. (1pt)
-- [5] User can sign up to create a new account. (1pt)
-- [5] User can log in. (1pt)
-- [5] User can take a photo, add a caption, and post it to the server. (3pt)
-- [5] User can view the last 20 posts. (4pts)
+- [x] User sees app icon in home screen and styled launch screen. (1pt)
+- [x] User can sign up to create a new account. (1pt)
+- [x] User can log in. (1pt)
+- [x] User can take a photo, add a caption, and post it to the server. (3pt)
+- [x] User can view the last 20 posts. (4pts)
 
 The following **bonus** features are implemented:
 
