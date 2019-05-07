@@ -13,6 +13,7 @@ import MessageInputBar
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
+    let alertController = UIAlertController(title: "", message: "are you sure you want to log out?", preferredStyle: .actionSheet)
     
     @IBOutlet weak var tableView: UITableView!
     let commentBar = MessageInputBar()
@@ -74,7 +75,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let post = posts[section]
         let comments = (post["comments"] as? [PFObject]) ?? []
-        
+     
         
         return comments.count + 2
     }
@@ -125,13 +126,43 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func onLogoutButton(_ sender: Any) {
         
         PFUser.logOut()
+        let logoutAction = UIAlertAction(title: "Log Out", style: .destructive) { (action) in
+            // handle case of user logging out
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+            let delegate =  UIApplication.shared.delegate as! AppDelegate
+            
+            delegate.window?.rootViewController = loginViewController
+            
+            
+            
+        }
         
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
-        let delegate =  UIApplication.shared.delegate as! AppDelegate
+        // add the logout action to the alert controller
+        alertController.addAction(logoutAction)
         
-        delegate.window?.rootViewController = loginViewController
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+        }
+        // add the cancel action to the alert controller
+        alertController.addAction(cancelAction)
+        
+        
+        present(alertController, animated: true) {
+            // optional code for what happens after the alert controller has finished presenting
+        }
+        
+        
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {

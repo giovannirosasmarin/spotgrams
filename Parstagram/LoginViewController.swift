@@ -11,6 +11,8 @@ import Parse
 
 class LoginViewController: UIViewController {
     
+    let alertController = UIAlertController(title: "Email required", message: "Please enter email", preferredStyle: .alert)
+    
     
     //login fields
     @IBOutlet weak var usernameField: UITextField!
@@ -30,13 +32,31 @@ class LoginViewController: UIViewController {
         let password = passwordField.text!
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             
+           
+            
+            
             if user != nil{
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                
+            
+          
+              
+              
             }else{
                 print("Error: \(String(describing: error?.localizedDescription))")
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    
+                }
+                
+                // add the OK action to the alert controller
+                self.alertController.addAction(OKAction)
+                self.present(self.alertController, animated: true) {
+                    // optional code for what happens after the alert controller has finished presenting
+                }
             }
+       
         }
+      
+
     }
     
     @IBAction func onSignup(_ sender: Any) {

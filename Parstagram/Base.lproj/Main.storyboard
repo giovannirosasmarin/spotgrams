@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parstagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-tT-NFy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotgram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-tT-NFy">
                                 <rect key="frame" x="40" y="114" width="294" height="78"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="65"/>
                                 <nil key="textColor"/>
@@ -54,7 +54,7 @@
                                 <rect key="frame" x="40" y="332" width="267" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sC-oc-GGd">
                                 <rect key="frame" x="40" y="303" width="74" height="21"/>
@@ -232,11 +232,18 @@
                                 <action selector="onLogoutButton:" destination="Yen-j8-PhC" id="igH-kJ-WgK"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="+" image="insta_camera_btn" id="yLA-VX-X6B">
-                            <connections>
-                                <segue destination="yP1-Pm-Ven" kind="presentation" id="bcH-Ik-fXc"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="+" image="insta_camera_btn" id="yLA-VX-X6B">
+                                <connections>
+                                    <segue destination="xIM-C9-1K0" kind="presentation" id="bcH-Ik-fXc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="hvm-OO-Qjp">
+                                <connections>
+                                    <segue destination="5Ae-St-bIk" kind="presentation" id="LSQ-D8-5Zd"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="uj7-kU-szI" id="Oso-u5-hRK"/>
@@ -246,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="1592.8" y="26.53673163418291"/>
         </scene>
-        <!--Camera View Controller-->
+        <!--Add image-->
         <scene sceneID="i2y-M2-9th">
             <objects>
                 <viewController id="yP1-Pm-Ven" customClass="CameraViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,7 +262,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="TOY-NB-H7L">
-                                <rect key="frame" x="16" y="48" width="343" height="271"/>
+                                <rect key="frame" x="16" y="92" width="343" height="271"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="271" id="XvU-iv-L04"/>
@@ -266,7 +273,7 @@
                                 </connections>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQn-A1-eSk">
-                                <rect key="frame" x="16" y="355" width="343" height="30"/>
+                                <rect key="frame" x="16" y="399" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0bY-vJ-CXa"/>
                                     <constraint firstAttribute="width" constant="343" id="RV4-Y2-vQC"/>
@@ -276,7 +283,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92O-QL-oF2">
-                                <rect key="frame" x="16" y="424" width="343" height="30"/>
+                                <rect key="frame" x="16" y="468" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="T7j-sS-67b"/>
                                     <constraint firstAttribute="height" constant="30" id="yqG-F4-pKN"/>
@@ -310,6 +317,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qUJ-oj-YUt"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add image" id="4Pt-fF-9cO">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="FZ7-0N-A3I">
+                            <connections>
+                                <segue destination="fbQ-jY-py4" kind="presentation" id="I1F-Tc-m2M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ImageView" destination="TOY-NB-H7L" id="KrN-Xt-eYJ"/>
                         <outlet property="commentField" destination="PQn-A1-eSk" id="Igu-eV-tHi"/>
@@ -322,7 +336,76 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2328.8000000000002" y="26.53673163418291"/>
+            <point key="canvasLocation" x="3287.1999999999998" y="-758.77061469265368"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="nd1-Gg-aIT">
+            <objects>
+                <viewController id="kvD-Zr-rPd" customClass="ChatViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Abl-Tv-hjY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message... " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UX8-o1-q4h">
+                                <rect key="frame" x="16" y="86" width="207" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbD-O3-XwA">
+                                <rect key="frame" x="307" y="86" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="twa-70-hlw">
+                                <rect key="frame" x="16" y="167" width="343" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="53" id="66a-xi-e99" customClass="ChatCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="66a-xi-e99" id="zNy-UZ-z5F" customClass="ChatCell" customModule="Parstagram" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Marin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwm-3K-D7Z" userLabel="User Label">
+                                                    <rect key="frame" x="15" y="11" width="72" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="1J6-Bh-Wi5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAA-eM-nFM" userLabel="Message Label">
+                                                    <rect key="frame" x="123" y="11" width="205" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="f5E-mo-2NL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" id="Nng-u3-Vlr">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="waB-aO-e4p">
+                            <connections>
+                                <segue destination="fbQ-jY-py4" kind="presentation" id="71n-D3-B4B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIN-KC-TgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3511.1999999999998" y="377.36131934032989"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FLg-jS-Q1r">
@@ -342,9 +425,48 @@
             </objects>
             <point key="canvasLocation" x="849" y="27"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LnL-tG-yrt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ae-St-bIk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NBT-DG-aT3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kvD-Zr-rPd" kind="relationship" relationship="rootViewController" id="a9v-4C-5uy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fcd-A7-5o9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="377.36131934032989"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4MB-gc-O5R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xIM-C9-1K0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jqo-vx-Vwm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yP1-Pm-Ven" kind="relationship" relationship="rootViewController" id="YQk-Ew-wpD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mss-V9-CYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="-758.77061469265368"/>
+        </scene>
     </scenes>
     <resources>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="71n-D3-B4B"/>
+    </inferredMetricsTieBreakers>
 </document>
