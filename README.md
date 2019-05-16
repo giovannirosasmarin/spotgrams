@@ -1,53 +1,44 @@
 
-# Parstagram - Part II
+# CSC 690 - Final Project Spotgram
 
-This is an Instagram clone with a custom Parse backend that allows a user to post photos, view a global photos feed, and add comments!
+# Team
+Giovanni Rosas-Marin
 
-Time spent: **4** hours spent in total
 
-## User Stories
+# Intro
+This is an Instagram clone with a custom Parse backend that allows a user to post photos, view a global photos feed, and add comments, chat, has its own little profile still fixed cant be updated.
 
-The following **required** functionality is completed:
+# What the app will have
+I just went with the same Idea of instagram but for cars spotgram added the ability to add pictures, chat with other users, have profile add comments.  Each part took different hours just the chat took 4 hours, putting all the parse together other 4 hours and implementing everything together around 20 plus hours and I still think it would take more time to make it more presentable.
 
-- [x] User stays logged in across restarts. (1pt)
-- [x] User can log out. (1pt)
-- [x] User can view comments on a post. (3pts)
-- [x] User can add a new comment. (5pts)
+# Walkthrough development
+User stays logged in across restarts.
+User can log out.
+User can view comments on a post.
+User can add a new comment.
 
-The following **bonus** features are implemented:
-
-- [ ] User can add a profile picture. (2pts)
-- [ ] Profile pictures are shown for posts and comments. (2pts)
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
+## Video Walkthrough of implementation
 
 <img src='http://g.recordit.co/9ZSxYgZwju.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-# Parstagram - Part I
-
-This is an Instagram clone with a custom Parse backend that allows a user to post photos and view a global photos feed.
-
-Time spent: **7** hours spent in total
-
-## User Stories
-
-The following **required** functionality is completed:
-
-- [x] User sees app icon in home screen and styled launch screen. (1pt)
-- [x] User can sign up to create a new account. (1pt)
-- [x] User can log in. (1pt)
-- [x] User can take a photo, add a caption, and post it to the server. (3pt)
-- [x] User can view the last 20 posts. (4pts)
-
-The following **bonus** features are implemented:
-
-- [ ] User can pull to refresh. (1pt)
-- [ ] User can load past tweets infinitely. (2pts)
+User sees app icon in home screen and styled launch screen.
+User can sign up to create a new account. 
+User can log in.
+User can take a photo, add a caption, and post it to the server.
+User can view the last 20 posts.
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-
 <img src='http://g.recordit.co/w0yHDC2Qpl.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
+
+User can chat
+User has a profile
+Can add different users for chat
+Has new alerts in password and for logout 
+has back buttons for all screens
+
+## Final product Video 
+<img src='http://g.recordit.co/9p7WJvs7yP.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
